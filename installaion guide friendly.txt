@@ -1,0 +1,39 @@
+Under Python 3.10.12
+
+1 build virtual enviornment by python -m venv whateverenvname
+
+2 source to the venv
+
+3 pip uninstall torch-scatter torch-sparse torch-geometric torch-cluster transformers tokenizer datasets --y (optional)
+
+4 pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu118
+
+5 pip install transformers==4.38.1 tokenizer==3.4.3 datasets==2.17.1
+
+5.5 pip install torch-scatter -f https://data.pyg.org/whl/torch-2.0.0+cu118.html;
+    pip install torch-sparse -f https://data.pyg.org/whl/torch-2.0.0+cu118.html;
+    pip install torch-cluster -f https://data.pyg.org/whl/torch-2.0.0+cu118.html
+
+6 pip install pip install git+https://github.com/pyg-team/pytorch_geometric.git@b812cffc9dc4cd2b901377305f5cb716fa31e5fd
+
+7 pip install scipy==1.12.0 numpy==1.23.5 ogb==1.3.6 tqdm==4.66.2 scikit-learn==1.4.1.post1
+
+8 pip install gdown==5.1.0
+
+9 gdown 1FoiYzXjzsjMI0ftRLtFcUxJ8Bd2q-TI9
+
+10 unzip DeepRobust.zip
+
+11 cd DeepRobust;python setup.py install;cd ..;mkdir data
+
+12 python ogbn_converter.py
+
+13 cd data;mkdir flickr;cd flickr;gdown 1vJSY0_iCUGN8HvApp23X89VTsp9cCdzY;unzip flickr_dataset.zip
+
+14 cd ..;mkdir reddit;cd reddit;gdown 1Q30563Enz7vO6GTQiVaXKrSjoVUYrNad;unzip reddit_dataset.zip
+
+15 cd ../..
+
+16 start running code from scripts_final.txt
+
+Hope this instruction is friendly for you.
